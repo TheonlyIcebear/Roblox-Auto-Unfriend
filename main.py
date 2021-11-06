@@ -7794,7 +7794,7 @@ try:
       friendIds.append(i['id'])
     print(friendIds)
     for i in friendIds:
-      requests.post(f"https://friends.roblox.com/v1/users/{i}/unfriend",cookies={'.ROBLOSECURITY': str(cookie)}, headers=headers)
+      requests.post(f"https://friends.roblox.com/v1/users/{i}/unfriend",cookies={'.ROBLOSECURITY': str(cookie)}, headers=headers, proxies={"http":proxy})
     cprint("Unfriended All!", "green")
   else:
     cprint("Invalid Cookie", 'red')
