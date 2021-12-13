@@ -1,6 +1,7 @@
 import requests
 import random
 from termcolor import cprint
+import time
 
 proxies = ["http://51.91.157.66:80",
             "http://196.15.221.201:80",
@@ -7787,7 +7788,7 @@ try:
       friendIds.append(i['id'])
     print(friendIds)
     for i in friendIds:
-            time.sleep(1)
+      time.sleep(1)
       requests.post(f"https://friends.roblox.com/v1/users/{i}/unfriend",cookies={'.ROBLOSECURITY': str(cookie)}, headers=headers, proxies={"http":proxy})
       cprint(f"Unfriended {i}!", "green")
     cprint("Unfriended All!", "green")
